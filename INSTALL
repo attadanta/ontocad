@@ -3,5 +3,11 @@
 Path="`dirname \"$0\"`"              # relative
 Path="`( cd \"$Path\" && pwd )`"  # absolutized and normalized
 
-sudo apt-get install gtk-doc-tools python-cairo-dev python-numpy python-pip python-scipy python-glade2 python-gtkglext1
+# Enable the universe repository
+sudo add-apt-repository universe
+
+# System and Python dependencies
+sudo apt-get install gtk-doc-tools python-cairo-dev python-numpy python-pip python-scipy python-glade2 python-gtkglext1 python-lxml
+
+# Further Python dependencies
 sudo pip install -U rdflib
